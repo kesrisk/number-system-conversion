@@ -1,4 +1,5 @@
-The Class Convert can convert
+`The Class Convert can convert
+`
 
 1- from Binary to Decimal
   - Method binary2decimal() will return the result directly
