@@ -1,36 +1,36 @@
 class Convert:
     def __init__(self):
-        self.nb = 0
-        self.nd = 0
-        self.current_nb = 0
-        self.current_nd = 0
+        self.__nb = 0
+        self.__nd = 0
+        self.__current_nb = 0
+        self.__current_nd = 0
 
-    def d2b(self,n):
+    def __d2b(self,n):
         if n == 0:
             return
         r = n%2
-        self.d2b(n//2)
-        self.nb = self.nb*10 + r
+        self.__d2b(n//2)
+        self.__nb = self.__nb*10 + r
 
-    def b2d(self, n, p):
+    def __b2d(self, n, p):
         if n == 0:
             return
         r = n%10
-        self.nd += ((2**p) * r)
-        return self.b2d(n//10, p+1)
+        self.__nd += ((2**p) * r)
+        return self.__b2d(n//10, p+1)
 
 
     def decimal2binary(self, n):
-        self.d2b(n)
-        self.current_nb = self.nb
-        self.nb = 0
-        return self.current_nb
+        self.__d2b(n)
+        self.__current_nb = self.__nb
+        self.__nb = 0
+        return self.__current_nb
 
     def binary2decimal(self, n):
-        self.b2d(n, 0)
-        self.current_nd = self.nd
-        self.nd = 0
-        return self.current_nd
+        self.__b2d(n, 0)
+        self.__current_nd = self.__nd
+        self.__nd = 0
+        return self.__current_nd
 
 
 A = Convert()
