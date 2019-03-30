@@ -1,4 +1,4 @@
-class convert:
+class Convert:
     def __init__(self):
         self.nb = 0
         self.nd = 0
@@ -33,7 +33,7 @@ class convert:
         return self.current_nd
 
 
-A = convert()
+A = Convert()
 print(A.binary2decimal(111000))
 print(A.binary2decimal(10000))
 print(A.binary2decimal(100))
